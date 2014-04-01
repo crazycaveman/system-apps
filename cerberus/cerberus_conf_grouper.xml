@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <boolean name="picalarm" value="true" />
+    <string name="screenshot">1</string>
+    <long name="boot_ts" value="1380995201" />
+    <boolean name="picmessage" value="true" />
+    <string name="dialcode">23723787</string>
+    <string name="hash">9b71f4c3355a74bdbc2c8affe183a6dc880d4c02</string>
+    <boolean name="firstrun" value="false" />
+    <boolean name="picunlock" value="true" />
+    <boolean name="wipe" value="true" />
+    <boolean name="history" value="true" />
+    <string name="screencolor">3</string>
+    <string name="unlockno">2</string>
+    <string name="token">n0zf35ziroj67sqr2rzp</string>
+    <boolean name="hidden" value="false" />
+    <string name="smskeyword">cerberus</string>
+    <string name="user">crazycaveman</string>
+    <boolean name="wipesd" value="true" />
+    <string name="auth">-13544580243463837747777777771</string>
+</map>

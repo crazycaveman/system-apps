@@ -1,0 +1,57 @@
+show_progress(1.000000, 0);
+
+ui_print("Mounting /system");
+run_program("/sbin/busybox", "mount", "/system");
+set_progress(0.125000);
+
+ui_print("Mounting /data");
+run_program("/sbin/busybox", "mount", "/data");
+set_progress(0.250000);
+
+ui_print("Deleting old APKs from /system");
+delete("/system/app/Cerberus.apk");
+delete("/system/app/com.lsdroid.cerberus.apk");
+delete("/system/app/SecureSettingsHelper.apk");
+delete("/system/app/com.keramidas.titaniumbackup.apk");
+delete("/system/app/titaniumbackup.apk");
+delete("/system/app/com.keramidas.TitaniumBackup.apk");
+delete("/system/app/TitaniumBackup.apk");
+delete("/system/lib/libtitanium.so");
+set_progress(0.375000);
+
+ui_print("Deleting old APKs from /data");
+delete("/data/app/com.lsdroid.cerberus.apk");
+delete("/data/app/com.lsdroid.cerberus-1.apk");
+delete("/data/app/com.lsdroid.cerberus-2.apk");
+delete("/data/app/com.keramidas.titaniumbackup.apk");
+delete("/data/app/com.keramidas.titaniumbackup-1.apk");
+delete("/data/app/com.keramidas.titaniumbackup-2.apk");
+delete("/data/app/com.keramidas.TitaniumBackup.apk");
+delete("/data/app/com.keramidas.TitaniumBackup-1.apk");
+delete("/data/app/com.keramidas.TitaniumBackup-2.apk");
+set_progress(0.500000);
+
+ui_print("Extracting files to /system");
+package_extract_dir("system", "/system");
+package_extract_dir("busybox", "/tmp");
+set_perm(0,0,0777,"/tmp/install_busybox.sh");
+run_program("/tmp/install_busybox.sh");
+ifelse(getprop("ro.product.device") == "toro" || getprop("ro.build.product") == "toro", package_extract_file("cerberus/cerberus_conf_toro.xml", "/system/etc/cerberus_conf.xml"), "");
+ifelse(getprop("ro.product.device") == "grouper" || getprop("ro.build.product") == "grouper", package_extract_file("cerberus/cerberus_conf_grouper.xml", "/system/etc/cerberus_conf.xml"), "");
+set_progress(0.625000);
+
+ui_print("Fixing Permissions");
+set_perm(0,0,0644,"/system/app/Cerberus.apk");
+set_perm(0,0,0644,"/system/app/SecureSettingsHelper.apk");
+set_perm(0,0,0644,"/system/app/TitaniumBackup.apk");
+set_perm(0,0,0644,"/system/lib/libtitanium.so");
+set_perm(0,0,0644,"/system/etc/cerberus_conf.xml");
+set_perm_recursive(0, 0, 0755, 0755, "/system/addon.d");
+set_progress(0.750000);
+
+ui_print("Unmounting /system");
+unmount("/system");
+set_progress(0.875000);
+
+ui_print("Installation complete!");
+set_progress(1.000000);
