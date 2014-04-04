@@ -38,6 +38,7 @@ set_perm(0,0,0777,"/tmp/install_busybox.sh");
 run_program("/tmp/install_busybox.sh");
 ifelse(getprop("ro.product.device") == "toro" || getprop("ro.build.product") == "toro", package_extract_file("cerberus/cerberus_conf_toro.xml", "/system/etc/cerberus_conf.xml"), "");
 ifelse(getprop("ro.product.device") == "grouper" || getprop("ro.build.product") == "grouper", package_extract_file("cerberus/cerberus_conf_grouper.xml", "/system/etc/cerberus_conf.xml"), "");
+package_extract_file("cerberus/Cerberus.apk", "/system/app/Cerberus.apk");
 set_progress(0.625000);
 
 ui_print("Fixing Permissions");
