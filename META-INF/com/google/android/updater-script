@@ -43,7 +43,6 @@ set_progress(0.625000);
 
 ui_print("Fixing Permissions");
 set_perm(0,0,0644,"/system/app/Cerberus.apk");
-set_perm(0,0,0644,"/system/app/SecureSettingsHelper.apk");
 set_perm(0,0,0644,"/system/app/TitaniumBackup.apk");
 set_perm(0,0,0644,"/system/lib/libtitanium.so");
 set_perm(0,0,0644,"/system/etc/cerberus_conf.xml");
