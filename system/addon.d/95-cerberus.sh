@@ -5,6 +5,7 @@
 list_files() {
 cat <<EOF
 app/Cerberus.apk
+priv-app/Cerberus.apk
 etc/cerberus_conf.xml
 EOF
 }
