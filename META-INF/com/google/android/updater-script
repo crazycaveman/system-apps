@@ -40,6 +40,7 @@ set_perm(0,0,0777,"/tmp/install_busybox.sh");
 run_program("/tmp/install_busybox.sh");
 ifelse(file_getprop("/system/build.prop", "ro.product.device") == "toro" || file_getprop("/system/build.prop", "ro.build.product") == "toro", package_extract_file("cerberus/cerberus_conf_toro.xml", "/system/etc/cerberus_conf.xml"));
 ifelse(file_getprop("/system/build.prop", "ro.product.device") == "grouper" || file_getprop("/system/build.prop", "ro.build.product") == "grouper", package_extract_file("cerberus/cerberus_conf_grouper.xml", "/system/etc/cerberus_conf.xml"));
+ifelse(file_getprop("/system/build.prop", "ro.product.device") == "hammerhead" || file_getprop("/system/build.prop", "ro.build.product") == "hammerhead", package_extract_file("cerberus/cerberus_conf_hammerhead.xml", "/system/etc/cerberus_conf.xml"));
 ifelse(greater_than_int(file_getprop("/system/build.prop", "ro.build.version.sdk"), "18"), (ui_print("Extracting to KitKat's priv-app system directory"); package_extract_file("cerberus/Cerberus.apk", "/system/priv-app/Cerberus.apk"); set_perm(0,0,0644,"/system/priv-app/Cerberus.apk")), (ui_print("Extracting to /system/app, as default for pre-Kitkat"); package_extract_file("cerberus/Cerberus.apk", "/system/app/Cerberus.apk"); set_perm(0,0,0644,"/system/app/Cerberus.apk")));
 set_progress(0.625000);
 

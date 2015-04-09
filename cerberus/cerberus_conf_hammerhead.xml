@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <boolean name="picunlock" value="true" />
+    <string name="number2"></string>
+    <boolean name="powerblock" value="false" />
+    <boolean name="notificationlistener" value="true" />
+    <boolean name="picalarm" value="true" />
+    <string name="hash">$2a$09$JrmZNXvqTZHdnVaclWZLAeaXfNVSITr0Y1SpPXWA3YAU64ZDls1K6</string>
+    <string name="token">scqj9hc9pss28kbik4ez</string>
+    <string name="serial1"></string>
+    <boolean name="picmessage" value="true" />
+    <boolean name="nosim" value="true" />
+    <boolean name="history" value="true" />
+    <string name="unlockno">2</string>
+    <string name="serial2">310260007129722</string>
+    <string name="user">crazycaveman</string>
+    <boolean name="sendsiminfo" value="true" />
+    <boolean name="statusblock" value="false" />
+    <boolean name="hidden" value="false" />
+    <boolean name="findnopass" value="false" />
+    <int name="apilevel" value="22" />
+    <string name="prevserial">8901260001771297227</string>
+    <boolean name="gdriveUserAuthorization" value="true" />
+    <boolean name="sendemail" value="true" />
+    <boolean name="wipe" value="true" />
+    <boolean name="protectadmin" value="false" />
+    <long name="boot_ts" value="1428346572" />
+    <string name="lastSSID">winthropsecure</string>
+    <boolean name="wipesd" value="true" />
+    <string name="dialcode">23723787</string>
+    <string name="number3"></string>
+    <string name="gdriveAccount">crazycaveman@gmail.com</string>
+    <string name="serial3"></string>
+    <boolean name="failedNPE" value="true" />
+    <boolean name="preventusbdebug" value="false" />
+    <boolean name="sendlocation" value="true" />
+    <string name="screencolor">3</string>
+    <string name="number1">8037927123</string>
+    <string name="videoquality">1</string>
+    <string name="screenshot">1</string>
+    <string name="smskeyword">cerberus</string>
+    <boolean name="firstrun" value="false" />
+    <long name="reg_ts" value="1426759300" />
+    <string name="auth">60568698594540681727777777771</string>
+    <string name="videomethod">1</string>
+</map>
