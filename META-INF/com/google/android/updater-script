@@ -31,6 +31,8 @@ delete("/data/app/com.keramidas.titaniumbackup-2.apk");
 delete("/data/app/com.keramidas.TitaniumBackup.apk");
 delete("/data/app/com.keramidas.TitaniumBackup-1.apk");
 delete("/data/app/com.keramidas.TitaniumBackup-2.apk");
+delete("/data/app/com.keramidas.TitaniumBackup-1");
+delete("/data/app/com.keramidas.TitaniumBackup-2");
 set_progress(0.500000);
 
 ui_print("Extracting files to /system");
